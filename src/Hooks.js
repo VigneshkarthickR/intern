@@ -6,5 +6,4 @@ function Hooks() {
     }}>{count}</p>
 }
 
-
 export default Hooks
