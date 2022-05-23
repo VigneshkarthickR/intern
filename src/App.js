@@ -1,10 +1,13 @@
 import './App.css';
-import Hooks from './Hooks';
+import { Hooks, Effect, Effectapi } from './Hooks';
 
 function App() {
   return (
     <>
       <Hooks />
+
+      <Effect />
+      <Effectapi />
 
     </>
   );
