@@ -1,13 +1,16 @@
 import './App.css';
-import { Hooks, Effect, Effectapi } from './Hooks';
+// import { Hooks, Effect, Effectapi } from './Hooks';
+import { Task } from './Task';
+
 
 function App() {
   return (
     <>
-      <Hooks />
-
+      {/* <Hooks />
       <Effect />
-      <Effectapi />
+      <Effectapi /> */}
+      <Task />
+
 
     </>
   );

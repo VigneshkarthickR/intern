@@ -49,7 +49,9 @@ export function Effectapi() {
         <>
             < button onClick={() => setPage('posts')}>posts</button>
             < button onClick={() => setPage('comments')}>comments</button>
+            {response.length}
             {JSON.stringify(response)}
+
         </>
     )
 
