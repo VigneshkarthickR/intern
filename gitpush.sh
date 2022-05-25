@@ -10,5 +10,5 @@ ECHO "Pushed to github
 ECHO
 ECHO "Junks & Caches Flushed 🔥"
 ECHO
-ECHO "image.png"
+ECHO "👽"
 
