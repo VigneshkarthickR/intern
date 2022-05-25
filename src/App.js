@@ -1,6 +1,6 @@
 import './App.css';
 // import { Hooks, Effect, Effectapi } from './Hooks';
-import { Task } from './Task';
+import { Task, UseRef } from './Task';
 
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <Effect />
       <Effectapi /> */}
       <Task />
+      <UseRef />
 
 
     </>

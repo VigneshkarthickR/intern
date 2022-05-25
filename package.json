@@ -12,6 +12,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "sh gitpush.sh",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

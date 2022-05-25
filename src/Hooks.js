@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 export function Hooks() {
     const [count, setCount] = useState(10);
-
     const handleIncrementCount = () => {
         setCount(count + 1)
     }
