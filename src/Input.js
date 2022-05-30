@@ -41,17 +41,19 @@ export default function Input() {
 
     const addressRef = useRef();
     const addressHandler = (event) => {
-        setNumber(event.target.value)
-        console.log(setNumber);
+        Setaddress(event.target.value)
+        console.log(Setaddress);
     }
     function showAcessaddress() {
         addressRef.current.focus()
     }
 
-    const resetInputField = () => {
-        setName("")
+    const clearInput = () => {
+        nameRef.current.value = ""
+        emailRef.current.value = ""
+        numberRef.current.value = ""
+        addressRef.current.value = ""
     };
-
 
 
 
@@ -79,7 +81,7 @@ export default function Input() {
                     Address:<input ref={addressRef} input type="text" name="task" placeholder="Type Address here" onChange={addressHandler} />
                     <br />
 
-                    <button type="button" onClick={resetInputField}>Reset</button>
+                    <button type="button" onClick={clearInput}>Reset</button>
 
                     <br />
 

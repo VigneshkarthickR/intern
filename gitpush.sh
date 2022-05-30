@@ -1,7 +1,7 @@
 
 
 git add .
-git commit -am "Form Task"
+git commit -am "Form Task completed"
 git push
 
 ECHO
