@@ -5,7 +5,7 @@ export default function Input() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [number, setNumber] = useState('')
-    const [address, Setaddress] = useState('')
+    const [address, setAddress] = useState('')
     const nameRef = useRef();
     const Handler = (event) => {
         event.preventDefault()
@@ -41,8 +41,8 @@ export default function Input() {
 
     const addressRef = useRef();
     const addressHandler = (event) => {
-        Setaddress(event.target.value)
-        console.log(Setaddress);
+        setAddress(event.target.value)
+        console.log(setAddress);
     }
     function showAcessaddress() {
         addressRef.current.focus()
@@ -58,7 +58,6 @@ export default function Input() {
 
 
 
-
     return (
         <>
 
@@ -66,19 +65,19 @@ export default function Input() {
 
                 <form >
 
-                    Name:<input ref={nameRef} input type="text" name="task" placeholder="Type Name here" onChange={nameRef} />
+                    Name:<input ref={nameRef} input type="text" name="task" placeholder="Type Name Here!" onChange={nameRef} />
                     <button type="button" onClick={showAcessemail}>submit</button>
                     <br />
 
-                    EmailID:<input ref={emailRef} input type="text" name="task" placeholder="Type Email ID here" onChange={numberHandler} />
+                    EmailID:<input ref={emailRef} input type="text" name="task" placeholder="Type Email ID Here!" onChange={numberHandler} />
                     <button type="button" onClick={showAcessnumber}>submit</button>
                     <br />
 
-                    Number:<input ref={numberRef} input type="text" name="task" placeholder="Type Number here" onChange={emailHandler} />
+                    Number:<input ref={numberRef} input type="text" name="task" placeholder="Type Number Here!" onChange={emailHandler} />
                     <button type="button" onClick={showAcessaddress}>submit</button>
                     <br />
 
-                    Address:<input ref={addressRef} input type="text" name="task" placeholder="Type Address here" onChange={addressHandler} />
+                    Address:<input ref={addressRef} input type="text" name="task" placeholder="Type Address Here!" onChange={addressHandler} />
                     <br />
 
                     <button type="button" onClick={clearInput}>Reset</button>

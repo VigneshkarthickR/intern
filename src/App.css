@@ -1,11 +1,13 @@
 .centerDiv {
   display: flex;
   justify-content: center;
+
+
 }
 
 .box {
 
-  border: 2px solid rgb(1, 0, 0);
+  border: 2px solid rgb(28, 22, 22);
 
 
 }
