@@ -5,8 +5,7 @@ export function Task() {
     const [currentValue, setCurrentvalue] = useState('')
     const [data, setData] = useState([])
     const textHandler = (event) => {
-        setCurrentvalue(event.target.value);
-        console.log(currentValue);
+        setCurrentvalue(event.target.value)
     }
     const finalHandler = () => {
         setData([...data, currentValue])
