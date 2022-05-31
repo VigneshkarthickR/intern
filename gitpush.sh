@@ -1,7 +1,7 @@
 
 
 git add .
-git commit -am "Test"
+git commit -am "alert"
 git push
 
 ECHO

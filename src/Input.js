@@ -55,6 +55,17 @@ export default function Input() {
         addressRef.current.value = ""
     };
 
+    const submit = () => {
+        var data = {
+            name: nameRef.current.value,
+            email: emailRef.current.value,
+            number: numberRef.current.value,
+            address: addressRef.current.value,
+        }
+        return alert(JSON.stringify(data))
+    }
+
+
 
 
 
@@ -65,7 +76,7 @@ export default function Input() {
 
                 <form >
 
-                    Name:<input ref={nameRef} input type="text" name="task" placeholder="Type Name Here!" onChange={nameRef} />
+                    Name:<input ref={nameRef} type="text" name="task" placeholder="Type Name Here!" onChange={nameRef} />
                     <button type="button" onClick={showAcessemail}>submit</button>
                     <br />
 
@@ -84,7 +95,8 @@ export default function Input() {
 
                     <br />
 
-
+                    <button onClick={submit}>Final Submit</button>
+                    <br />
                 </form>
 
             </div>
