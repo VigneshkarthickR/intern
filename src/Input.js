@@ -1,28 +1,24 @@
 import React, { useState, useRef, useEffect } from "react";
-
 import './App.css';
 export default function Input() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [number, setNumber] = useState('')
     const [address, setAddress] = useState('')
+
     const nameRef = useRef();
-    const Handler = (event) => {
-        event.preventDefault()
-        setName(event.target.value);
+    const nameHandler = (event) => {
+        setName(event.target.value)
+
 
     }
     useEffect(() => {
         nameRef.current.focus()
     }, [])
-
-
-
-
     const emailRef = useRef();
     const emailHandler = (event) => {
         setEmail(event.target.value)
-        console.log(setEmail);
+
     }
     function showAcessemail() {
         emailRef.current.focus()
@@ -32,7 +28,7 @@ export default function Input() {
     const numberRef = useRef();
     const numberHandler = (event) => {
         setNumber(event.target.value)
-        console.log(setNumber);
+
     }
     function showAcessnumber() {
         numberRef.current.focus()
@@ -42,7 +38,7 @@ export default function Input() {
     const addressRef = useRef();
     const addressHandler = (event) => {
         setAddress(event.target.value)
-        console.log(setAddress);
+
     }
     function showAcessaddress() {
         addressRef.current.focus()
@@ -55,16 +51,17 @@ export default function Input() {
         addressRef.current.value = ""
     };
 
-    const submit = () => {
+    const submit = (r) => {
+        r.preventDefault()
         var data = {
-            name: nameRef.current.value,
-            email: emailRef.current.value,
-            number: numberRef.current.value,
-            address: addressRef.current.value,
+            name: name,
+            email: email,
+            number: number,
+            address: address,
         }
-        return alert(JSON.stringify(data))
-    }
 
+        return console.log(data);
+    }
 
 
 
@@ -72,31 +69,28 @@ export default function Input() {
     return (
         <>
 
+
             <div className="centerDiv">
 
-                <form >
+                <form onSubmit={submit}>
 
-                    Name:<input ref={nameRef} type="text" name="task" placeholder="Type Name Here!" onChange={nameRef} />
-                    <button type="button" onClick={showAcessemail}>submit</button>
+                    <label>Name:</label><input ref={nameRef} type="text" name="task" placeholder="Type Name Here!" onChange={nameHandler} onKeyPress={showAcessemail} />
                     <br />
 
-                    EmailID:<input ref={emailRef} input type="text" name="task" placeholder="Type Email ID Here!" onChange={numberHandler} />
-                    <button type="button" onClick={showAcessnumber}>submit</button>
+                    <label>EmailID:</label><input ref={emailRef} input type="text" name="task" placeholder="Type Email ID Here!" onChange={emailHandler} onKeyPress={showAcessnumber} />
                     <br />
 
-                    Number:<input ref={numberRef} input type="text" name="task" placeholder="Type Number Here!" onChange={emailHandler} />
-                    <button type="button" onClick={showAcessaddress}>submit</button>
+
+                    <label>Number:</label><input ref={numberRef} input type="text" name="task" placeholder="Type Number Here!" onChange={numberHandler} onKeyPress={showAcessaddress} />
                     <br />
 
-                    Address:<input ref={addressRef} input type="text" name="task" placeholder="Type Address Here!" onChange={addressHandler} />
+                    <label>Address:</label><input ref={addressRef} input type="text" name="task" placeholder="Type Address Here!" onChange={addressHandler} />
                     <br />
-
                     <button type="button" onClick={clearInput}>Reset</button>
-
                     <br />
 
-                    <button onClick={submit}>Final Submit</button>
-                    <br />
+                    <input type="submit" value="submit" />
+
                 </form>
 
             </div>

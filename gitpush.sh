@@ -1,7 +1,7 @@
 
 
 git add .
-git commit -am "alert"
+git commit -am "prevent handler"
 git push
 
 ECHO
